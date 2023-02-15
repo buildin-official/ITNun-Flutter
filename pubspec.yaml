@@ -56,7 +56,7 @@ flutter_icons:
 
 flutter_native_splash:
   color: "#FFFFFF"
-  image: assets/icons/logo.png
+  image: assets/icons/splash.png
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
