@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:itnun/common/consts.dart';
 import 'package:itnun/core/presentation/widget/logo_with_text.dart';
 
@@ -38,7 +39,7 @@ class _IntroLayout extends StatelessWidget {
           width: double.infinity,
           height: 56,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () => context.push("/login"),
             child: const Text("시작하기"),
           ),
         ),

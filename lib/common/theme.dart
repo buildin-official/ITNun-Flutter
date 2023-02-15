@@ -17,5 +17,11 @@ final theme = ThemeData(
     backgroundColor: Colors.transparent,
     centerTitle: true,
     elevation: 0,
+    titleTextStyle: TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+      color: Colors.black,
+    ),
+    iconTheme: IconThemeData(color: Colors.black),
   ),
 );
