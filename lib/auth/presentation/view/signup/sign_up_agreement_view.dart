@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:go_router/go_router.dart';
 import 'package:itnun/auth/presentation/widget/auth_title_widget.dart';
 import 'package:itnun/common/consts.dart';
 import 'package:itnun/common/palette.dart';
 import 'package:itnun/core/presentation/widget/app_back_button.dart';
 import 'package:itnun/core/presentation/widget/default_button_sized_box.dart';
 
-class AgreementView extends StatelessWidget {
-  const AgreementView({Key? key}) : super(key: key);
+class SignUpAgreementView extends StatelessWidget {
+  const SignUpAgreementView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +19,14 @@ class AgreementView extends StatelessWidget {
       ),
       body: const Padding(
         padding: kDefaultPadding,
-        child: _AgreementLayout(),
+        child: _SignUpAgreementLayout(),
       ),
     );
   }
 }
 
-class _AgreementLayout extends HookWidget {
-  const _AgreementLayout({Key? key}) : super(key: key);
+class _SignUpAgreementLayout extends HookWidget {
+  const _SignUpAgreementLayout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -107,8 +108,9 @@ class _AgreementLayout extends HookWidget {
         const Expanded(child: SizedBox.shrink()),
         DefaultButtonSizedBox(
           child: ElevatedButton(
-            onPressed:
-                essentials.every((element) => element.value) ? () {} : null,
+            onPressed: essentials.every((element) => element.value)
+                ? () => context.push("/signup/phone")
+                : null,
             child: const Text("다음"),
           ),
         ),
@@ -141,7 +143,7 @@ class _CheckWidget extends StatelessWidget {
     } else if (value) {
       color = Palette.text.shade800;
     } else {
-      color = Palette.text.shade500;
+      color = Palette.text;
     }
 
     return InkWell(

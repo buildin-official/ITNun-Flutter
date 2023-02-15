@@ -80,7 +80,7 @@ class _LoginLayout extends HookWidget {
         const SizedBox(height: 18),
         TextButton(
           onPressed: () {
-            context.push("/find/password");
+            context.push("/password/phone");
           },
           child: Text(
             "비밀번호 찾기",

@@ -1,16 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_switch/flutter_switch.dart';
 import 'package:go_router/go_router.dart';
 import 'package:itnun/auth/presentation/widget/auth_title_widget.dart';
 import 'package:itnun/common/consts.dart';
 import 'package:itnun/common/palette.dart';
 import 'package:itnun/core/presentation/widget/app_back_button.dart';
+import 'package:itnun/core/presentation/widget/default_button_sized_box.dart';
 
-import '../../../../core/presentation/widget/default_button_sized_box.dart';
-
-class SignupUserInfoView extends HookWidget {
-  const SignupUserInfoView({Key? key}) : super(key: key);
+class SignUpUserInfoView extends HookWidget {
+  const SignUpUserInfoView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,15 +40,11 @@ class SignupUserInfoView extends HookWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                FlutterSwitch(
+                CupertinoSwitch(
                   value: status.value,
-                  onToggle: ((val) {
-                    status.value = val;
-                  }),
-                  activeColor: Palette.primary.shade500,
-                  width: 60,
-                  height: 35,
-                )
+                  onChanged: (value) => status.value = value,
+                  activeColor: Palette.primary,
+                ),
               ],
             ),
             const Expanded(child: SizedBox.shrink()),

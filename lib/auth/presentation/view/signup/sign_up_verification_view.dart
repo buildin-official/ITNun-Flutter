@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:itnun/auth/presentation/widget/auth_title_widget.dart';
 import 'package:itnun/common/consts.dart';
 import 'package:itnun/core/presentation/widget/app_back_button.dart';
+import 'package:itnun/core/presentation/widget/default_button_sized_box.dart';
 import 'package:itnun/core/presentation/widget/labeled_text_field.dart';
 
-import '../../../../core/presentation/widget/default_button_sized_box.dart';
-
-class SignupNameView extends StatelessWidget {
-  const SignupNameView({Key? key}) : super(key: key);
+class SignUpVerificationView extends HookWidget {
+  const SignUpVerificationView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,31 +23,27 @@ class SignupNameView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const AuthTitleWidget(
-              title: "서비스 이용을 위해\n닉네임을 입력해주세요",
-              subtitle: "나중에 설정에서 수정할 수 있어요.",
+              title: "입력하신 전화번호로\n인증번호가 전송되었어요",
+              subtitle: "메세지에서 확인해주세요.",
             ),
             TextFormField(
               decoration: const InputDecoration(
-                hintText: "닉네임을 입력해주세요",
+                hintText: "인증번호를 입력해주세요",
               ),
-              keyboardType: TextInputType.text,
-            ).labeled(
-              label: "닉네임",
-              required: true,
-            ),
+              keyboardType: TextInputType.number,
+            ).labeled(label: "인증번호", required: true),
             const Expanded(child: SizedBox.shrink()),
             Padding(
               padding: const EdgeInsets.only(bottom: 20),
               child: DefaultButtonSizedBox(
                 child: ElevatedButton(
                   onPressed: () {
-                    context.push("/signup/password");
+                    context.push("/signup/name");
                   },
-                  child: const Text("다음"),
+                  child: const Text("인증하기"),
                 ),
               ),
             ),
-            //"다음"
           ],
         ),
       ),

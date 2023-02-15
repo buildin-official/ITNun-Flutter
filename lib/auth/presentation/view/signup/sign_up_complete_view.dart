@@ -5,8 +5,8 @@ import 'package:itnun/common/palette.dart';
 import 'package:itnun/core/presentation/widget/app_back_button.dart';
 import 'package:itnun/core/presentation/widget/default_button_sized_box.dart';
 
-class SignupCompleteView extends StatelessWidget {
-  const SignupCompleteView({super.key});
+class SignUpCompleteView extends StatelessWidget {
+  const SignUpCompleteView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class SignupCompleteView extends StatelessWidget {
               child: DefaultButtonSizedBox(
                 child: ElevatedButton(
                   onPressed: () {
-                    context.push("/");
+                    context.push("/login");
                   },
                   child: const Text("시작하기"),
                 ),
