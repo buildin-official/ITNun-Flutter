@@ -33,6 +33,7 @@ class SignupCompleteView extends StatelessWidget {
               "환영합니다, 허관무님!",
               style : TextStyle(
                 fontSize: 24,
+                fontWeight: FontWeight.w600
               ),
             ),
           ],
