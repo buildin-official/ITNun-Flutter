@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Palette {
+  static const subtitle=Color(0xff999999);
   static const primary = MaterialColor(
     0xFF3C65F8,
     {
