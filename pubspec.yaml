@@ -57,7 +57,7 @@ flutter_icons:
 
 flutter_native_splash:
   color: "#FFFFFF"
-  image: assets/icons/splash.png
+  image: assets/images/logo.png
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -91,3 +91,5 @@ flutter:
           weight: 800
         - asset: assets/fonts/SUIT-Heavy.otf
           weight: 900
+  assets:
+    - assets/images/
