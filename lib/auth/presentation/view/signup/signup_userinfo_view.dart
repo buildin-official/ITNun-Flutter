@@ -33,10 +33,10 @@ class SignupUserInfoView extends HookWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   "(예비)창업자에요.",
                   style: TextStyle(
-                    color: Color(0xff262626),
+                    color: Palette.text.shade900,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
