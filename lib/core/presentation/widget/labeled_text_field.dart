@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
+import 'package:itnun/common/palette.dart';
 
 extension Labeled on TextFormField {
   LabeledTextField labeled({
@@ -33,8 +34,8 @@ class LabeledTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     final text = Text(
       label,
-      style: const TextStyle(
-        color: Color(0xFF262626),
+      style: TextStyle(
+        color: Palette.text.shade900,
         fontSize: 18,
         fontWeight: FontWeight.bold,
       ),
@@ -49,7 +50,7 @@ class LabeledTextField extends StatelessWidget {
                     badgeContent: const Text(
                       "*",
                       style: TextStyle(
-                        color: Color(0xFFF37D10),
+                        color: Palette.notify,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -67,9 +68,9 @@ class LabeledTextField extends StatelessWidget {
                 : text,
             if (!isValid) ...[
               const SizedBox(width: 4),
-              const Icon(
+              Icon(
                 Icons.error,
-                color: Color(0xFFF33333),
+                color: Palette.negative.shade400,
                 size: 20,
               )
             ]
