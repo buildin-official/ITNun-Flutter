@@ -97,7 +97,7 @@ class _LoginLayout extends HookWidget {
         DefaultButtonSizedBox(
           child: OutlinedButton(
             onPressed: () {
-              context.push("/signup/phone");
+              context.push("/signup/agreement");
             },
             child: const Text("회원가입"),
           ),

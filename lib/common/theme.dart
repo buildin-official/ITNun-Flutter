@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:itnun/common/palette.dart';
 
-const _inputBorder = UnderlineInputBorder(
+final _inputBorder = UnderlineInputBorder(
   borderSide: BorderSide(
-    color: Color(0xFFCCCCCC),
+    color: Palette.text.shade400,
   ),
 );
 
@@ -32,8 +32,8 @@ final theme = ThemeData(
   ),
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-      side: BorderSide(
-        color: Palette.primary.shade500,
+      side: const BorderSide(
+        color: Palette.primary,
         width: 2,
       ),
       textStyle: const TextStyle(
@@ -45,17 +45,17 @@ final theme = ThemeData(
       ),
     ),
   ),
-  inputDecorationTheme: const InputDecorationTheme(
+  inputDecorationTheme: InputDecorationTheme(
     enabledBorder: _inputBorder,
     focusedBorder: _inputBorder,
     errorBorder: _inputBorder,
     focusedErrorBorder: _inputBorder,
     hintStyle: TextStyle(
       fontSize: 16,
-      color: Color(0xFFCCCCCC),
+      color: Palette.text.shade400,
     ),
     errorStyle: TextStyle(
-      color: Color(0xFFF33333),
+      color: Palette.negative.shade400,
       fontSize: 12,
       fontWeight: FontWeight.w500,
     ),
