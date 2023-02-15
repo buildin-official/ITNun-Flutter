@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:itnun/common/consts.dart';
 import 'package:itnun/common/palette.dart';
 import 'package:itnun/core/presentation/widget/app_back_button.dart';
+
+import '../../../../core/presentation/widget/default_button_sized_box.dart';
 
 class SignupCompleteView extends StatelessWidget {
   const SignupCompleteView({super.key});
@@ -11,10 +15,12 @@ class SignupCompleteView extends StatelessWidget {
         leading: const AppBackButton(),
         title: const Text("회원가입"),
       ),
-      body: Center(
+      body: Padding(
+        padding: kDefaultPadding,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Expanded(child: SizedBox.shrink()),
             Container(
               width: 108,
               height: 108,
@@ -36,6 +42,8 @@ class SignupCompleteView extends StatelessWidget {
                 fontWeight: FontWeight.w600
               ),
             ),
+            Expanded(child: SizedBox.shrink()),
+            Padding(padding: EdgeInsets.only(bottom: 20),child: DefaultButtonSizedBox(child: ElevatedButton(onPressed: (){context.push("/");}, child: Text("시작하기"))),),
           ],
         ),
       ),

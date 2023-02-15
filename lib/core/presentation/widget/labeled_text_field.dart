@@ -5,7 +5,7 @@ import 'package:itnun/common/palette.dart';
 extension Labeled on TextFormField {
   LabeledTextField labeled({
     required String label,
-    required bool isValid,
+    bool isValid = true,
     bool required = false,
   }) =>
       LabeledTextField(
