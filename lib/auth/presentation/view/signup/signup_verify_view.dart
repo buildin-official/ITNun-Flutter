@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:go_router/go_router.dart';
 import 'package:itnun/common/consts.dart';
 import 'package:itnun/common/palette.dart';
 import 'package:itnun/core/presentation/widget/app_back_button.dart';
+import 'package:itnun/core/presentation/widget/labeled_text_field.dart';
 
-class SignupVerifyView extends StatelessWidget {
+import '../../../../core/presentation/widget/default_button_sized_box.dart';
+
+class SignupVerifyView extends HookWidget {
   const SignupVerifyView({Key? key}) : super(key: key);
 
   @override
@@ -24,11 +29,19 @@ class SignupVerifyView extends StatelessWidget {
             SizedBox(height: 20,),
             Text("메세지에서 확인해주세요.",style:TextStyle(fontWeight: FontWeight.w500,fontSize: 18,color: Palette.subtitle)),
             SizedBox(height: 50,),
-            //Todo:인증번호 입력 TextField 만드셈
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: "인증번호를 입력해주세요",
+              ),
+              keyboardType: TextInputType.number,
+            ).labeled(
+                label: "인증번호",
+                required: true
+            ),
 
             Expanded(child: SizedBox.shrink()),
-            Padding(padding: EdgeInsets.only(bottom: 20),child: Container(color: Colors.blue,height: 56,width: double.infinity,),),
-            //"인증하기"
+            Padding(padding: EdgeInsets.only(bottom: 20),child: DefaultButtonSizedBox(child: ElevatedButton(onPressed: (){context.push("/signup/name");}, child: Text("인증하기"))),),
+
 
 
           ],

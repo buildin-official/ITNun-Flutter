@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:go_router/go_router.dart';
 import 'package:itnun/common/consts.dart';
 import 'package:itnun/common/palette.dart';
 import 'package:itnun/core/presentation/widget/app_back_button.dart';
+
+import '../../../../core/presentation/widget/default_button_sized_box.dart';
 
 class SignupUserInfoView extends HookWidget {
   const SignupUserInfoView({Key? key}) : super(key: key);
@@ -42,9 +45,10 @@ class SignupUserInfoView extends HookWidget {
               ],
             ),
 
-            Expanded(child: SizedBox.shrink()),
-            Padding(padding: EdgeInsets.only(bottom: 20),child: Container(color: Colors.blue,height: 56,width: double.infinity,),),
 
+
+            Expanded(child: SizedBox.shrink()),
+            Padding(padding: EdgeInsets.only(bottom: 20),child: DefaultButtonSizedBox(child: ElevatedButton(onPressed: (){context.push("/signup/complete");}, child: Text("완료"))),),
 
 
           ],

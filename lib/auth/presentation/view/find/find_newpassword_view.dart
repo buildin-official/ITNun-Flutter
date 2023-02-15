@@ -7,14 +7,14 @@ import 'package:itnun/core/presentation/widget/labeled_text_field.dart';
 
 import '../../../../core/presentation/widget/default_button_sized_box.dart';
 
-class SignupPasswordView extends StatelessWidget {
-  const SignupPasswordView({Key? key}) : super(key: key);
+class NewPasswordView extends StatelessWidget {
+  const NewPasswordView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("회원가입"),
+        title: Text("비밀번호 찾기"),
         leading: AppBackButton(),
       ),
       body: Padding(
@@ -24,13 +24,13 @@ class SignupPasswordView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 70,),
-            Text("서비스 이용을 위해\n비밀번호를 입력해주세요",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+            Text("새 비밀번호를\n입력해주세요",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
             SizedBox(height: 20,),
             Text("영어, 숫자 포함 8자 이상부터 사용할 수 있어요.",style:TextStyle(fontWeight: FontWeight.w500,fontSize: 18,color: Palette.subtitle)),
             SizedBox(height: 50,),
             TextFormField(
               decoration: InputDecoration(
-                hintText: "비밀번호를 입력해주세요",
+                hintText: "새 비밀번호를 입력해주세요",
               ),
               keyboardType: TextInputType.text,
             ).labeled(
@@ -40,7 +40,7 @@ class SignupPasswordView extends StatelessWidget {
             SizedBox(height: 30,),
             TextFormField(
               decoration: InputDecoration(
-                hintText: "비밀번호를 다시 입력해주세요",
+                hintText: "새 비밀번호를 다시 입력해주세요",
               ),
               keyboardType: TextInputType.text,
             ).labeled(
@@ -49,7 +49,7 @@ class SignupPasswordView extends StatelessWidget {
             ),
 
             Expanded(child: SizedBox.shrink()),
-            Padding(padding: EdgeInsets.only(bottom: 20),child: DefaultButtonSizedBox(child: ElevatedButton(onPressed: (){context.push("/signup/userinfo");}, child: Text("다음"))),),
+            Padding(padding: EdgeInsets.only(bottom: 20),child: DefaultButtonSizedBox(child: ElevatedButton(onPressed: (){context.push("/login");}, child: Text("비밀번호 변경 완료하기"))),),
 
 
 

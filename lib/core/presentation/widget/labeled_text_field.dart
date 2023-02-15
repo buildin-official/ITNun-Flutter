@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 extension Labeled on TextFormField {
   LabeledTextField labeled({
     required String label,
-    required bool isValid,
+    bool isValid = true,
     bool required = false,
   }) =>
       LabeledTextField(
