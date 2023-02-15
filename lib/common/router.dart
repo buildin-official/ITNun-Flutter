@@ -58,6 +58,32 @@ final router = GoRouter(
           path: "find/newpassword",
           builder: (context, state) => const NewPasswordView(),
         ),
+        GoRoute(
+          path: "signup/verify",
+          builder: (context,state)=>const SignupVerifyView(),
+        ),
+        GoRoute(
+          path: "signup/password",
+          builder: (context,state)=>const SignupPasswordView(),
+        ),
+        GoRoute(
+          path: "signup/name",
+          builder: (context,state)=>const SignupNameView(),
+        ),
+        GoRoute(
+          path: "find/password",
+          builder: (context,state)=>const FindPasswordView(),
+        ),
+        GoRoute(
+          path: "find/verify",
+          builder: (context,state)=>const FindVerifyView(),
+        ),
+        GoRoute(
+          path: "find/newpassword",
+          builder: (context,state)=>const NewPasswordView(),
+        ),
+
+
       ],
     ),
   ],

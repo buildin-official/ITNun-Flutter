@@ -72,7 +72,8 @@ class _LoginLayout extends HookWidget {
         const SizedBox(height: 20),
         DefaultButtonSizedBox(
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+            },
             child: const Text("로그인"),
           ),
         ),
