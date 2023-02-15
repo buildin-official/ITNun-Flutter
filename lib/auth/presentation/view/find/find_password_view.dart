@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:itnun/common/consts.dart';
 import 'package:itnun/common/palette.dart';
 import 'package:itnun/core/presentation/widget/app_back_button.dart';
+import 'package:itnun/core/presentation/widget/labeled_text_field.dart';
 
-class SignupFindPasswordView extends StatelessWidget {
-  const SignupFindPasswordView({Key? key}) : super(key: key);
+import '../../../../core/presentation/widget/default_button_sized_box.dart';
+
+class FindPasswordView extends StatelessWidget {
+  const FindPasswordView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("회원가입"),
+        title: Text("비밀번호 찾기"),
         leading: AppBackButton(),
       ),
       body: Padding(
@@ -24,11 +28,18 @@ class SignupFindPasswordView extends StatelessWidget {
             SizedBox(height: 20,),
             Text("비밀번호 변경 메세지를 보내드릴게요.",style:TextStyle(fontWeight: FontWeight.w500,fontSize: 18,color: Palette.subtitle)),
             SizedBox(height: 50,),
-            //Todo:전화번호 입력 TextField 만드셈
+            TextFormField(
+              decoration: InputDecoration(
+                hintText: "전화번호를 입력해주세요",
+              ),
+              keyboardType: TextInputType.number,
+            ).labeled(
+                label: "전화번호",
+                required: true
+            ),
 
             Expanded(child: SizedBox.shrink()),
-            Padding(padding: EdgeInsets.only(bottom: 20),child: Container(color: Colors.blue,height: 56,width: double.infinity,),),
-            //"인증번호 전송하기"
+            Padding(padding: EdgeInsets.only(bottom: 20),child: DefaultButtonSizedBox(child: ElevatedButton(onPressed: (){context.push("/find/verify");}, child: Text("인증번호 전송하기"))),),
 
 
           ],

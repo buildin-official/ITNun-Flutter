@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:go_router/go_router.dart';
 import 'package:itnun/common/consts.dart';
 import 'package:itnun/core/presentation/widget/app_back_button.dart';
 import 'package:itnun/core/presentation/widget/default_button_sized_box.dart';
@@ -71,13 +72,16 @@ class _LoginLayout extends HookWidget {
         const SizedBox(height: 20),
         DefaultButtonSizedBox(
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+            },
             child: const Text("로그인"),
           ),
         ),
         const SizedBox(height: 18),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            context.push("/find/password");
+          },
           child: const Text(
             "비밀번호 찾기",
             style: TextStyle(
@@ -92,7 +96,9 @@ class _LoginLayout extends HookWidget {
         const SizedBox(height: 18),
         DefaultButtonSizedBox(
           child: OutlinedButton(
-            onPressed: () {},
+            onPressed: () {
+              context.push("/signup/phone");
+            },
             child: const Text("회원가입"),
           ),
         ),
