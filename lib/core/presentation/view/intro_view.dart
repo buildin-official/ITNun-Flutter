@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:itnun/common/consts.dart';
+import 'package:itnun/core/presentation/widget/default_button_sized_box.dart';
 import 'package:itnun/core/presentation/widget/logo_with_text.dart';
 
 class IntroView extends StatelessWidget {
@@ -9,9 +10,11 @@ class IntroView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Padding(
-        padding: kDefaultPadding,
-        child: _IntroLayout(),
+      body: SafeArea(
+        child: Padding(
+          padding: kDefaultPadding,
+          child: _IntroLayout(),
+        ),
       ),
     );
   }
@@ -35,9 +38,7 @@ class _IntroLayout extends StatelessWidget {
         const SizedBox(height: 6),
         const LogoWithText(width: 134),
         const Expanded(child: SizedBox.shrink()),
-        SizedBox(
-          width: double.infinity,
-          height: 56,
+        DefaultButtonSizedBox(
           child: ElevatedButton(
             onPressed: () => context.push("/login"),
             child: const Text("시작하기"),
