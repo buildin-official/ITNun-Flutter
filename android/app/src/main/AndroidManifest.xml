@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.buildin.itnun">
+    package="kr.buildin.itnun">
    <application
         android:label="잇는"
         android:name="${applicationName}"

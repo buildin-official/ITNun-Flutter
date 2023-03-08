@@ -1,4 +1,4 @@
-package com.buildin.itnun
+package kr.buildin.itnun
 
 import io.flutter.embedding.android.FlutterActivity
 
