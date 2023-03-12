@@ -16,7 +16,7 @@ final theme = ThemeData(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
       ),
-      textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: "SUIT"),
     ),
   ),
   appBarTheme: const AppBarTheme(
@@ -25,6 +25,7 @@ final theme = ThemeData(
     elevation: 0,
     titleTextStyle: TextStyle(
       fontSize: 20,
+      fontFamily: "SUIT",
       fontWeight: FontWeight.bold,
       color: Colors.black,
     ),
@@ -38,6 +39,7 @@ final theme = ThemeData(
       ),
       textStyle: const TextStyle(
         fontSize: 18,
+        fontFamily: "SUIT",
         fontWeight: FontWeight.bold,
       ),
       shape: RoundedRectangleBorder(
@@ -52,11 +54,13 @@ final theme = ThemeData(
     focusedErrorBorder: _inputBorder,
     hintStyle: TextStyle(
       fontSize: 16,
+      fontFamily: "SUIT",
       color: Palette.text.shade400,
     ),
     errorStyle: TextStyle(
       color: Palette.negative.shade400,
       fontSize: 12,
+      fontFamily: "SUIT",
       fontWeight: FontWeight.w500,
     ),
   ),
