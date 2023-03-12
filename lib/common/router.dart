@@ -4,6 +4,7 @@ import 'package:itnun/auth/presentation/view/login_view.dart';
 import 'package:itnun/auth/presentation/view/password_find/password_find_new_view.dart';
 import 'package:itnun/auth/presentation/view/password_find/password_find_phone_view.dart';
 import 'package:itnun/auth/presentation/view/password_find/password_find_verification_view.dart';
+import 'package:itnun/auth/presentation/view/setting/setting_notification_view.dart';
 import 'package:itnun/auth/presentation/view/signup/sign_up_agreement_view.dart';
 import 'package:itnun/auth/presentation/view/signup/sign_up_complete_view.dart';
 import 'package:itnun/auth/presentation/view/signup/sign_up_name_view.dart';
@@ -75,6 +76,16 @@ final router = GoRouter(
               builder: (context, state) => const PasswordFindNewView(),
             ),
           ],
+        ),
+        GoRoute(
+          path: "setting",
+          builder: (context, state) => const SizedBox.shrink(),
+          routes: [
+            GoRoute(
+              path: "notification",
+              builder: (context, state) => const SettingNotificationView(),
+            ),
+          ]
         ),
       ],
     ),
