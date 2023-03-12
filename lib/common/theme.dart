@@ -20,7 +20,7 @@ final theme = ThemeData(
     ),
   ),
   appBarTheme: const AppBarTheme(
-    backgroundColor: Colors.transparent,
+    backgroundColor: Colors.white,
     centerTitle: true,
     elevation: 0,
     titleTextStyle: TextStyle(
