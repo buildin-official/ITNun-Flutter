@@ -114,7 +114,7 @@ class EasyDropDown extends HookWidget {
           menuMaxHeight: 330,
           items: selections.map((e) => DropdownMenuItem(
             value: e,
-            child: Text(e, style: const TextStyle(fontFamily: "SUIT", fontWeight: FontWeight.w500)),
+            child: Text(e, style: const TextStyle(fontFamily: "SUIT", fontWeight: FontWeight.w600)),
           )).toList(),
           onChanged: (value){ selectedItem.value = value!; },
         ),
